@@ -7,8 +7,6 @@ const connectDB = () =>{
 
     connection.once('open', () =>{
         console.log('Database connection');
-    }).catch(err =>{
-        console.log('connection failed');
     })
 }
 module.exports = connectDB;
