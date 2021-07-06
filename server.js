@@ -6,7 +6,8 @@ connectDB();
 const PORT = process.env.PORT || 5000;
 app.use(express.json()); 
 app.use(express.static('public'));
-
+const cors = require('cors');
+app.use(cors())
 //define routes
 app.use('/api/files',  require('./routes/file'));
 app.use('/files', require('./routes/show'));
